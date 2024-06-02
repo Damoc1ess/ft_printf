@@ -6,7 +6,7 @@
 /*   By: fflamion <fflamion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/29 13:41:04 by fflamion          #+#    #+#             */
-/*   Updated: 2024/05/31 18:26:37 by fflamion         ###   ########.fr       */
+/*   Updated: 2024/06/02 13:24:46 by fflamion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,11 @@
 
 int	ft_putstr(char *str)
 {
-	int	count;
+	int	len;
 
-	count = 0;
-	while (*str)
-	{
-		ft_putchar(*str);
-		str++;
-		count++;
-	}
-	return (count);
+	len = ft_strlen(str);
+	if (!str)
+		return (ft_putstr("(null)"));
+	write(1, str, len);
+	return (len);
 }

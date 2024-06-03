@@ -6,7 +6,7 @@
 #    By: fflamion <fflamion@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/25 20:49:42 by fflamion          #+#    #+#              #
-#    Updated: 2024/06/01 18:33:57 by fflamion         ###   ########.fr        #
+#    Updated: 2024/06/02 18:41:23 by fflamion         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -74,7 +74,7 @@ OBJSBONUS = ${SRCSBONUS:.c=.o}
 NAME = libft.a
 
 # Compiler and flags
-CC = gcc
+CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
 # Command for remove files after compilation

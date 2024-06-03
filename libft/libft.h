@@ -6,7 +6,7 @@
 /*   By: fflamion <fflamion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 20:48:26 by fflamion          #+#    #+#             */
-/*   Updated: 2024/06/01 21:35:43 by fflamion         ###   ########.fr       */
+/*   Updated: 2024/06/02 19:21:16 by fflamion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,12 +59,12 @@ void		ft_putstr_fd(char *s, int fd);
 void		ft_putendl_fd(char *s, int fd);
 void		ft_putnbr_fd(int n, int fd);
 
-int		ft_putchar(char c);
-int		ft_putnbr_hex(unsigned int n, int uppercase);
-int		ft_putpointer(void *ptr);
+int			ft_putchar(char c);
+int			ft_putnbr_hex(unsigned int n, int uppercase);
+int			ft_putpointer(void *ptr);
 int			ft_putstr(char *str);
-int		ft_putnbr(int n);
-int		ft_putnbr_u(unsigned int n);
+int			ft_putnbr(int n);
+int			ft_putnbr_u(unsigned int n);
 
 typedef struct s_list
 {

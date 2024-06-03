@@ -6,7 +6,7 @@
 /*   By: fflamion <fflamion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 11:04:33 by fflamion          #+#    #+#             */
-/*   Updated: 2024/06/02 16:09:52 by fflamion         ###   ########.fr       */
+/*   Updated: 2024/06/03 01:51:38 by fflamion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,11 +40,15 @@ static int	handle_format(const char **format, va_list args)
 
 int	ft_printf(const char *format, ...)
 {
-	size_t		count;
+	size_t	count;
 	va_list	args;
 
 	count = 0;
 	va_start(args, format);
+	if (format == NULL)
+	{
+		return (0);
+	}
 	while (*format)
 	{
 		if (*format == '%')
@@ -63,52 +67,49 @@ int	ft_printf(const char *format, ...)
 	return (count);
 }
 /*
-int main(void) {
+int main(void)
+{
 	int ret;
 
 	ret = 42;
 
-//	// Test integer formats: %d and %i
-//	ret = ft_printf("%i\n", 214);
-//	printf("Return: %d\n", ret);
-//	printf("Expected: %d\n", printf("%i\n", 214));
+	// Test integer formats: %d and %i
+	ret = ft_printf("%i\n", 214);
+	printf("Return: %d\n", ret);
+	printf("Expected: %d\n", printf("%i\n", 214));
 
-//	// Test string format: %s
-//	ret = ft_printf("%s\n", "ceci est un string");
-//	printf("Return: %d\n", ret);
-//	printf("Expected: %d\n", printf("%s\n", "ceci est un string"));
+	// Test string format: %s
+	ret = ft_printf("%s\n", "ceci est un string");
+	printf("Return: %d\n", ret);
+	printf("Expected: %d\n", printf("%s\n", "ceci est un string"));
 
 	// Test pointer format: %p
-	int n = 4242;
-	printf("\n");
-	printf("Return : %d\n",ft_printf("%p\n", (void *)&n));
-	printf("\n");
-	printf("Expected: %d\n", printf("%p\n", (void *)&n));
-	printf("\n");
+	ft_printf(" NULL %s NULL ", NULL);
+	printf(" NULL %s NULL ", NULL);
 
-//	// Test character format: %c
-//	ret = ft_printf("%c%c%c\n", 'A', 'B', 'D');
-//	printf("Return: %d\n", ret);
-//	printf("Expected: %d\n", printf("%c%c%c\n", 'A', 'B', 'D'));
+	// Test character format: %c
+	ret = ft_printf("%c%c%c\n", 'A', 'B', 'D');
+	printf("Return: %d\n", ret);
+	printf("Expected: %d\n", printf("%c%c%c\n", 'A', 'B', 'D'));
 
-//	// Test unsigned integer format: %u
-//	ret = ft_printf("%u\n", 20);
-//	printf("Return: %d\n", ret);
-//	printf("Expected: %d\n", printf("%u\n", 20));
+	// Test unsigned integer format: %u
+	ret = ft_printf("%u\n", 20);
+	printf("Return: %d\n", ret);
+	printf("Expected: %d\n", printf("%u\n", 20));
 
-//	// Test hexadecimal formats: %x and %X
-//	ret = ft_printf("%x\n", 23);
-//	printf("Return: %d\n", ret);
-//	printf("Expected: %d\n", printf("%x\n", 23));
+	// Test hexadecimal formats: %x and %X
+	ret = ft_printf("%x\n", 23);
+	printf("Return: %d\n", ret);
+	printf("Expected: %d\n", printf("%x\n", 23));
 
-//	ret = ft_printf("%X\n", 23);
-//	printf("Return: %d\n", ret);
-//	printf("Expected: %d\n", printf("%X\n", 23));
+	ret = ft_printf("%X\n", 23);
+	printf("Return: %d\n", ret);
+	printf("Expected: %d\n", printf("%X\n", 23));
 
-//	// Test percent sign: %%
-//	ret = ft_printf("%%\n");
-//	printf("Return: %d\n", ret);
-//	printf("Expected: %d\n", printf("%%\n"));
+	// Test percent sign: %%
+	ret = ft_printf("%%\n");
+	printf("Return: %d\n", ret);
+	printf("Expected: %d\n", printf("%%\n"));
 
     return 0;
 }

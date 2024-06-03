@@ -6,7 +6,7 @@
 /*   By: fflamion <fflamion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/29 13:31:44 by fflamion          #+#    #+#             */
-/*   Updated: 2024/06/02 14:45:13 by fflamion         ###   ########.fr       */
+/*   Updated: 2024/06/02 19:30:28 by fflamion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_putnbr_hex(unsigned int n, int uppercase)
 {
-	char	*base;
-	size_t i;
+	char		*base;
+	size_t		i;
 
 	i = 0;
 	if (uppercase)
